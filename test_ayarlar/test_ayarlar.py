@@ -16,9 +16,9 @@ class Test_setting:
         self.driver.get("https://tobeto.com/giris")
         self.driver.maximize_window() 
         usernameInput = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By.XPATH,"//*[@id='__next']/div/main/section/div/div/div/div/form/input[1]")))
-        usernameInput.send_keys("Salimila2002@gmail.com")
+        usernameInput.send_keys("kairee.hashir@foodfarms.net")
         passwordInput = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By.XPATH,"//*[@id='__next']/div/main/section/div/div/div/div/form/input[2]")))
-        passwordInput.send_keys("Salimila2002")
+        passwordInput.send_keys("123456")
         loginButton = self.driver.find_element(By.XPATH,"//*[@id='__next']/div/main/section/div/div/div/div/form/button")
         loginButton.click()
         #WebDriverWait(self.driver, 5).until(ec.invisibility_of_element_located((By.CSS_SELECTOR, ".toast-body")))
@@ -48,7 +48,7 @@ class Test_setting:
                            
      
       oldPassword= self.waitForElementVisible(((By.NAME, oldPassword_NAME)))     
-      oldPassword.send_keys("Salimila2002")
+      oldPassword.send_keys("123456")
       
       newPassword=self.waitForElementVisible(((By.NAME, newPassword_NAME)))
       newPassword.send_keys("12345")
@@ -73,7 +73,7 @@ class Test_setting:
      
       oldPassword= self.waitForElementVisible(((By.NAME, oldPassword_NAME)))           
       oldPassword.click()
-      oldPassword.send_keys("Salimila2002")
+      oldPassword.send_keys("123456")
       
       newPassword=self.waitForElementVisible(((By.NAME, newPassword_NAME)))
       newPassword.click()   
@@ -100,11 +100,11 @@ class Test_setting:
       
       newPassword=self.waitForElementVisible(((By.NAME, newPassword_NAME)))     
       newPassword.click()
-      newPassword.send_keys("123456")
+      newPassword.send_keys("12345678")
       
       newPasswordAgain=self.waitForElementVisible(((By.NAME, newPasswordAgain_NAME)))           
       newPasswordAgain.click()
-      newPasswordAgain.send_keys("123456")      
+      newPasswordAgain.send_keys("12345678")      
       
       
       self.driver.find_element(By.CSS_SELECTOR, ".btn-primary").click()            
@@ -120,16 +120,16 @@ class Test_setting:
      
       oldPassword= self.waitForElementVisible(((By.NAME, oldPassword_NAME)))                      
       oldPassword.click()
-      oldPassword.send_keys("Salimila2002")
+      oldPassword.send_keys("123456")
       
       
       newPassword=self.waitForElementVisible(((By.NAME, newPassword_NAME)))           
       newPassword.click()
-      newPassword.send_keys("Salimila2002")
+      newPassword.send_keys("123456")
       
       newPasswordAgain=self.waitForElementVisible(((By.NAME, newPasswordAgain_NAME)))                     
       newPasswordAgain.click()
-      newPasswordAgain.send_keys("Salimila2002")      
+      newPasswordAgain.send_keys("123456")      
       
       self.driver.find_element(By.CSS_SELECTOR, ".btn-primary").click() 
            
@@ -147,30 +147,30 @@ class Test_setting:
      
     
 
-    # # def test_password_update(self):
+    def test_password_update(self):
          
-    #   oldPassword= self.waitForElementVisible(((By.NAME, oldPassword_NAME)))                      
-    #   oldPassword.click()
-    #   oldPassword.send_keys("Salimila2002")
+       oldPassword= self.waitForElementVisible(((By.NAME, oldPassword_NAME)))                      
+       oldPassword.click()
+       oldPassword.send_keys("123456")
       
       
-    #   newPassword=self.waitForElementVisible(((By.NAME, newPassword_NAME)))           
-    #   newPassword.click()
-    #   newPassword.send_keys("Salimila1905")
+       newPassword=self.waitForElementVisible(((By.NAME, newPassword_NAME)))           
+       newPassword.click()
+       newPassword.send_keys("654321")
       
-    #   newPasswordAgain=self.waitForElementVisible(((By.NAME, newPasswordAgain_NAME)))                     
-    #   newPasswordAgain.click()
-    #   newPasswordAgain.send_keys("Salimila1905")      
+       newPasswordAgain=self.waitForElementVisible(((By.NAME, newPasswordAgain_NAME)))                     
+       newPasswordAgain.click()
+       newPasswordAgain.send_keys("654321")      
       
-    #   self.driver.find_element(By.CSS_SELECTOR, ".btn-primary").click() 
-    #   WebDriverWait(self.driver, 5).until(ec.presence_of_element_located((By.CSS_SELECTOR, ".toast-body")))
-    #   assert self.driver.find_element(By.CSS_SELECTOR, ".toast-body").text == "• Şifreniz güncellenmiştir."   
+       self.driver.find_element(By.CSS_SELECTOR, ".btn-primary").click() 
+       WebDriverWait(self.driver, 5).until(ec.presence_of_element_located((By.CSS_SELECTOR, ".toast-body")))
+       assert self.driver.find_element(By.CSS_SELECTOR, ".toast-body").text == "• Şifreniz güncellenmiştir."   
   
    
 
-    # def test_membership(self):
-    #     self.driver.find_element(By.XPATH, "//*[@id='__next']/div/main/section/div/div/div[2]/div/div/div[2]/button").click()
-    #     self.driver.find_element(By.XPATH,"/html/body/div[5]/div/div/div/div/div/div[2]/button[2]").click()
+    def test_membership(self):
+         self.driver.find_element(By.XPATH, "//*[@id='__next']/div/main/section/div/div/div[2]/div/div/div[2]/button").click()
+         self.driver.find_element(By.XPATH,"/html/body/div[5]/div/div/div/div/div/div[2]/button[2]").click()
 
 
 
