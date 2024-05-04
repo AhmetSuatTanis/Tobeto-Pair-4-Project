@@ -172,5 +172,8 @@ class Test_setting:
          self.driver.find_element(By.XPATH, "//*[@id='__next']/div/main/section/div/div/div[2]/div/div/div[2]/button").click()
          self.driver.find_element(By.XPATH,"/html/body/div[5]/div/div/div/div/div/div[2]/button[2]").click()
 
+         self.driver.quit()
 
 
+
+    
